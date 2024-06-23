@@ -97,6 +97,21 @@ def bot_chats(user_input):
             "Certainly! What do you call fake spaghetti? An impasta!",
             "Here goes: Why did the scarecrow win an award? Because he was outstanding in his field!",
             "Here's one: How does a penguin build its house? Igloos it together!"]
+        ],
+        r".*\bbye.*|.*\bgoodbye.*|.*\bsee you.*|.*\blater.*": [
+            "Goodbye! Have a great day!", "Bye! Take care!", "See you later!", "Goodbye! It was nice talking to you.",
+            "Farewell! Have a wonderful day!", "Bye! Hope to chat with you again soon."
+        ],
+        r".*\bquit.*|.*\bexit.*|.*\bleave.*": [
+            "Goodbye! If you need further assistance, just ask.", "Bye! Come back if you have more questions.",
+            "Exiting the chat. Have a good day!", "Goodbye! Feel free to return if you need more help.",
+            "Quitting the chat. Take care!", "Leaving the chat. Hope to assist you again soon."
+        ],
+        r".*\bthank you.*|.*\bthanks.*|.*\bappreciate it.*": [
+            "You're welcome! Goodbye!", "No problem! Have a great day!",
+            "You're welcome! Feel free to return if you need more help.",
+            "Happy to help! Bye!", "Glad I could assist! Goodbye!", "You're welcome! Take care!"
+        ]
     }
 
     for pattern, response_list in responses.items():
